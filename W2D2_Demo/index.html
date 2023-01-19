@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Katie Truchon, the coolest" >
+    <meta name="description" content="W2D2 Bio Assignment Demo" >
+    
+    <title>W2 | Bio</title>
+    <!--In documnet styling-->
+    <style>
+        /* in here we write CSS*/
+        /* Selecting in css and Javascript: Select specific elements ona a page 
+            *By element type           Ex: body ,div, p
+            *By ID attribute           Ex: #wrapper, #nav,#footer
+            *By class attribute        Ex: coming week 3
+
+        */
+
+        div{ 
+            border:1px solid black;
+            padding:10px; /*adds space between content an border of element*/
+            margin:5px; /* adds space between elements and others */
+        }
+
+
+        #nav, #footer {
+            background-color:lightgrey;
+        }
+    </style>
+</head>
+<body style="background-color:grey">
+
+    <div id="wrapper"> <!--This is a wrapper, and it wraps around all content-->
+
+        <!--Header-->
+        <h1>Your name</h1>
+
+        <!--NAV-->
+        <div id="nav">
+            <!--External link: This is a link to a page outside your webpage. -->
+            <a href="https://www.meca.edu"target="_blank">"Visit MECA"</a>
+
+            <!--Internal Link: a link to a page inside your website/root folder-->
+            <!--Relative path-->
+            <a href="page2.html">Page 2</a>
+
+            <!--In page jump link: a link to another section within the curent page-->
+            <a href="#bio">BIO</a>
+            <a href="#schools">Schools</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#footer">Bottom of page</a>
+
+        </div>
+
+        <!--Bio-->
+        <div id="bio">
+            <h2>About me</h2>
+
+            <p>Can a man still be <b>brave</b> if he’s afraid? That is the <i>only time</i> a man can be brave.A forked purple lightning bolt, on black field speckled with four-pointed stars. Winter is coming. You know nothing, Jon Snow. Pay the iron price. Unbowed, Unbent, Unbroken. It's <b><u>ten thousand miles</u></b> between Kings landing and the wall. It's ten thousand miles between Kings landing and the wall.</p>
+
+            <!--Remote image links (absolute paths)BOOO!! Bad!!!-->
+            <img src=https://www.google.com/imgres?imgurl alt="Chef knife on cutting board" style="width:500px"
+            title="hi!">
+                <!--Relative image link (relative path) resource must be stored in root folder-->
+                <img src="images/stormsEnd.jpg"alt="Storms end castle in spring time">
+        </div>
+        <!--Schools-->
+        <div id="schools">
+            <h2>Schools</h2>
+
+            <ol>
+                <li>NEIT</li>
+                <li>Le cordon Bleu</li>
+                <li>Wilmington Highschool</li>
+
+
+            </ol>
+        <div>
+            <img src="images/meca.jpg" alt="MECA Porteous building at dusk" style="width:500px"
+        
+        <!--Hobbies-->
+        <div id="hobbies">
+
+        </div>
+        <!--Footer-->
+        <div id="footer">  
+
+        </div>
+
+
+
+
+
+    </div>
+
+    
+    
+
+</body>
+</html>
