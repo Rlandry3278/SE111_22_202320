@@ -47,30 +47,30 @@
     
                     
                     <td><!--Input second step-->
-                        <input type="text" name="fName" id="fName" placeholder = "Fisrt name">
+                        <input type="text" name="fName" id="fName" placeholder = "Fisrt name" required>
                         <br>
 
-                        <input type="text"  name="Lname" id="name" placeholder = "Last name">
+                        <input type="text"  name="Lname" id="name" placeholder = "Last name" required>
 
                     </td>
                         
                 </tr>
                 <tr>
-                    <td><!--L-->
+                    <td><!--LbL-->
                         <label for ="cfirst">Childs Fisrt Name:</label>
 
                     </td>
-                    <td><!--Input-->
-                        <input type = "text" name = "cfirst"id = "cfirst" placeholder="Childs First Name">
+                    <td><!--InP-->
+                        <input type = "text" name = "cfirst"id = "cfirst" placeholder="Childs First Name" required>
                     </td>
 
                 </tr>
                 <tr>
-                    <td>
+                    <td><!--LbL-->
                         <label for = "age">Child's Age</label>
                     </td>
-                    <td>
-                        <input type="number" name = "age" value = "3">
+                    <td><!--InP-->
+                        <input type="number" name = "age" value = "3" required>
                     </td>
                 </tr>
                 <tr>
@@ -80,92 +80,144 @@
                     </td>
                     <td></td>
                 </tr>
+
                 <tr>
-                    <td>
+                    <td><!--LbL-->
                         <label for = "date">Date</label>
                     </td>
-                    <td>
-                        <input type = "date" name = "date">
+                    <td><!--InP-->
+                        <input type = "date" name = "date" required>
 
                     </td>
 
+                <tr>
 
-
+                <tr>
+                    <td><!--LbL-->
+                        <label for = "time">Start time</label>
+                    </td>
+                    <td><!--InP-->
+                        <input type="time" name = "time" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td><!--LbL-->
+                        <label for = "guests">Number of Guests</label>
+                    </td>
+                    <td><!--InP-->
+                        <input type="number" name = "guests" value = 5 required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2>Food</h2>
+                    
+                    </td>
+                    <td></td>
                 </tr>
 
+                <tr>
+                    <td><!--LbL-->
+                        <label for = "size">Size</label>
+                    </td>
+                    <td><!--Inpx3-->    
+                        <input type="radio" name="size" value="Sm">Sm 
 
+                        <input type="radio" name="size" value="Med">Med
 
-                
+                        <input type="radio" name="size" value="Lg">Lg
+                    </td>
+                <tr> 
+
+                <tr>
+                    <td><!--LbL-->
+                        <label for = "drinks">Drinks</label>
+                    </td>
+
+                    <td><!--Inpx3-->    
+                        <input type="checkbox" name="drink1" value="coke">Coca Cola 
+                            <br>
+                        <input type="checkbox" name="drink2" value="sprite">Sprite
+                            <br>
+                        <input type="checkbox" name="drink3" value="fruit punch">Hawaiin Punch
+                         <br>
+                        <input type="checkbox" name="drink4" value="lemonade">Dell's
+                            <br>
+                        <input type="checkbox" name="drink5" value="icedT">Lipton Iced Tea
+
+                    </td>
+
+                <tr>
+
+                <tr>
+                    <td><!--LbL-->
+                        <label for = "Cake" name = "cake">Cake</label>
+                    </td>
+
+                    <td>
+                        <select name="Cake">
+
+                            <option value="Chocolate">Chocolate</option selected>
+                            <option value="Vanilla">Vanilla</option>
+                            <option value="bring my own">Bring own =*( booo!</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <h2>Decorations</h2>
                     
-                        
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><!--LbL-->
+                        <label for = "colors">Color Scheme</label>
+                    </td>
+
+                    <td><!--Inp-->    
+                        Color scheme for the party
+                        <br> 
+                        <input type="color" name="colors"> 
+                    </td>
+
+                <tr>
+
+                <tr>
+
+                    <!--LbL -->
+                    <td>
+                        <label for="comments">Additional Comments: </label>
+                    </td>
+    
+                    <!--Inp--> 
+                    <td>
+                        <textarea name="comments"  placeholder="Please add any additional comments here ..."></textarea>
+                    </td>
+    
+                </tr>
+
+                <tr><!--SubmitB-->
+                    <td>
+                    </td>
+
+                    <td>
+                        <input type="submit" value="SUBMIT">
+                    </td>
+
+                </tr>
                 
                 
+                
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    
             </tbody>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </table>
-
-
-
-
-
-
-
-
     </form>
     
 </body>
