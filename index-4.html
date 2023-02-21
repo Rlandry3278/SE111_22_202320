@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Katie Truchon">
+    <meta name="description" content="This is a 'development' version of the demo for week 6. It is written in the order that it was programmed">
+    <title>Take Out Demo | Development Version</title>
+</head>
+<body>
+    
+    <h1>Take Out Demo</h1>
+
+    <!--below inside of <script> we must write in Javascript!-->
+    <script>
+        //now we are writing in Javascript!
+
+        //prompt the user to type "yes" or "no" 
+        var preference = prompt(`Welcome to Good Burger. Home of the Good Burger. Will this be to go? Type "yes" or "no".`)
+
+
+
+        //Checks input and returns a dining experience as a String
+        //accepts a String with values of "yes" or "no"
+
+        //function definition below
+        function checkDining(_preference)
+        {
+
+            //conditions or conditional statements are held inside of ( ) in .js
+            // === is exactly equal to in both value as well as data type
+            if(_preference.toLowerCase() === `yes`)
+            {
+                console.log(`checkDining() reached -- take-out`)
+
+                //pass value of 'TAKE OUT' back to where function was called
+                return `TAKE_OUT`
+            }
+
+            else 
+            {
+                console.log(`checkDining() reached -- dine-in`)
+                return `DINE_IN`
+
+            }
+
+            
+        }//checkDining() CLOSE
+
+
+        //store the results from the checkDining() into a variable -- this is actually where we are calling the function
+
+        var dining = checkDining(preference)
+
+        //check the dining value -- we need to display
+        //alert(dining)   --> creates pop-up window in browser
+
+        //PREFERENCE for TESTING
+        console.log(dining)
+
+
+        //Prompt the user to choose a 1, 2, or 3. Any other value will return a default
+        //IMPORTANT: `\n` is a line break Escape Character and is used in the alert, prompt or console to make a new line.
+        var order = prompt(`Thank you! I'll take your ${dining} order now.\nPlease type the number of the item you would like.\n1. Hamburger\n2. French Fries\n3. Milk Shake`)
+        //Test order in the console
+        console.log(order)
+
+
+        //Example of conditionals with Numbers
+        //Function accepts a Number argument and returns the type of food you ordered as a String
+
+        function foodOrDrink(_order)
+        {
+
+            if(_order < 3)
+            {
+                return `You want foods!`
+            }
+            else if(_order === 3)
+            {
+                return `Milkshake Time!`
+            }
+            else
+            {
+
+                return `Really? Not ordering from our menu? Pshh`
+            }
+
+
+        }//foodOrDrink() CLOSE
+
+        //Alert user of the type of food. Must convert string to a Number for order variable to work.
+
+        /* LINES 96 - 100 do the same thing (in order!) that line 103 is doing
+
+        order = Number(order) //convert to number
+
+        var order_type = foodOrDrink(order) //call function, get value 
+
+        alert(`${order_type}`)
+
+        */
+        alert(`${foodOrDrink(Number(order))}`)
+
+        //Function accepts a price as a Number and the tax rate as a percentage. Example calcTax(3.00, 20)
+        //Returns a the Total as a Number
+        function calcPriceWithTax(_price, _tax)
+        {
+            /*
+            var newPrice = _price + (_price * _tax/100)
+            reutrn newPrice
+
+            */
+            //below returns the result of the process! ie a singular value
+            return _price + (_price * (_tax / 100))
+
+        }
+
+
+        //Example of conditional with Strings
+        //Funcction accepts a String, and will return the exact item ordered as a String
+        function getItem(_order)
+        {
+            if(_order === `1`)
+            {
+                return "Hamburger"
+            }
+            else if(_order === `2`)
+            {
+                return "French Fries"
+            }
+            else if(_order === `3`)
+            {
+                return "Milk Shake"
+            }
+            else 
+            {
+                return "Nothing"
+            }
+        }//getItem() CLOSE
+
+        //get the item value
+        var item = getItem(order)
+        //order is already a value in the program at this point
+        //above line is taking that number value and passing it to the getItem function to return the STRING equivalent of that item ie 1 --> "Hamburger"
+
+
+        //Example of switch case to check equality instead of if statements
+        //Function accepts an item as a String and a whole number for the tax rate.
+        //Function will pass the tax rate to the calcPriceWithTax function.
+        //Functin will return the total amount owed as a Number 
+        function getTotal(_item, _tax)
+        {
+            //_item is the STRING of the number from order
+            //1 --> Hamburger, 2--> French Fries, 3 --> Milk Shake, 4 --> Nothing
+            switch(_item) //switch is REALLY similar to if/elif
+            {
+
+                //switch is passed one of te predetermined case values; it will run processes based on the case value
+
+                //these cases are calling a function and return values --> so when we call getTotal() we're channeled to a specific case, and that case will handle the return value for the function SO wherever we call getTotal is where the return of calcPriceWithTax() goes
+
+                case "Hamburger":
+
+                    return calcPriceWithTax(3.00, _tax)
+
+                    //in order to get out of switch cases, we need to use the break
+                    break; //just breaks you out of the case situation -- essentially making a "condition"false
+
+                case "Milk Shake":
+
+                    return calcPriceWithTax(5.00, _tax)
+
+                    break;
+
+                case "French Fries":
+
+                    return calcPriceWithTax(1.00, _tax)
+
+                    break;
+
+                case "Nothing":
+
+                    return calcPriceWithTax(0.00, _tax)
+
+                    break;
+
+            }//switch end
+
+        }//getTotal() CLOSE
+        
+
+        //Store the total amount owed and set it to have 2 decimal points
+        //CALL getTotal() to initiate the calcPriceWithTax()
+        //item --> string equivalent of item, 20 --> tax %
+        //.toFixed takes the return of getTotal and rounds it to the second decimal place
+        var total = getTotal(item, 20).toFixed(2)
+
+        //test the total
+        console.log(total)
+
+        //Alert user of how much they owe.
+        alert(`Thank you! Your order will cost $${total}.`)
+
+        //Get amount paid 
+        var paid = Number(prompt(`How much do you have? Type a number of dollars and cents`))
+
+
+        //Function accepts amount paid and amount owed.
+        //Function will cast the paid String to a Number and return the change.
+        function calcChange(_paid, _total)
+        {
+
+            return _paid - _total
+
+        }//calcChange() CLOSE
+
+
+
+        //get change and set to have 2 decimal points
+        var change = calcChange(paid, total).toFixed(2)
+
+        //check the values of paid to make sure theyve given enough money
+         //Function will accept the change as a Number
+        //Function will return a message as a String
+        function confirmOrder(_change)
+        {
+
+            if(_change < 0)
+            {
+                return `Sorry, you don't have enough money.`
+            }
+            else
+            {
+                return `Thank you for purchasing a ${item} for ${dining}.\nYour change is $${_change}.`
+            }
+
+        }//confirmOrder() CLOSE
+
+
+        //Alert user of their order confirmation
+        alert(confirmOrder(change))
+        
+        //test to the console
+        console.log(change)
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Katie Truchon 202040">
+    <meta name="description" content="Week 6 JS Intro">
+    
+    <title>Week 6 | JS Intro</title>
+
+</head>
+<body>
+    
+    <!--we should have some sort of HTML in the file-->
+    <h1>Week 6 Intro Demo | Javascript</h1>
+
+    <!--IN-DOCUMENT JAVASCRIPT-->
+    <!--in-document: lives within the .html (you saw this with CSS)-->
+    <script>
+        //everything inside of the script tags MUST be written in JAVASCRIPT!
+        
+        //creating a variable -- keyword "var"
+        var num1 = 10
+
+        var num2 = 7
+
+        //cannot use num1 or num2 in a process unless they have been DEFINED (value stored to them)
+        var sum = num1 + num2
+
+        //alert() allows for a pop-up in the browser page to display data
+        //alert() --> print() / OUTPUT
+        // ``denotes a literal string --> works similar to .format() in Python -- hold var names inside of ${VAR}
+        alert(`The sum is: \n${sum}`)
+
+        // escape sequences also work in Javascript --> \n (inside of strings!)
+
+
+        console.log(sum)        //often used for testing
+                                //no physical display, only found in the console 
+
+        /*to view console:  *F12/Right-Click > Inspect
+                            *Choose CONSOLE at top right
+                            *Refresh page
+
+                                                        */
+
+        //prompts user for value; waits for the ENTER key
+        prompt("Enter your name: ") 
+
+
+        //store the value form prompt()
+        var name = prompt("Enter your Last Name: ")
+
+        alert(`Your last name is: ${name}`)
+
+
+        //all data from prompt() is a STRING; must convert to Number() if wanting to do math
+
+        var num = prompt("Enter a number to multiply by 7: ")
+
+        //convert num to an actual Number
+        num = Number(num)
+
+        //num is now a NUMBER and can be used in a math process
+        var multi = num * 7
+
+        alert(`${num} * 7 = ${multi}`) //in browser, pop-up alert
+        console.log(`The multi value is: ${multi}`) //in console [inspect]
+
+
+    </script>
+
+
+
+
+</body>
+</html>
