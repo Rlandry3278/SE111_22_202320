@@ -88,21 +88,23 @@
 
 
 
-       //create a new object
+       //create a new object mixed data types of info that is all related to one main object
        var person1 = {
            first: `Katie`,
            last: `Truchon`,
            hasPets: true, 
            height: 64,
            classes: [`SE111`, `VGD129`, `GMW251`],
-           pets: {dogs: ['George', 'Marlowe'], cats: [`Jack`]},
+           pets: {dogs: ['George', 'Marlowe'], cats: [`Jack`]
+        },
+            //functions stored as a property in an object is a method
            greeting: function(){alert(`Hi there ${this.first} ${this.last}!`)}
        }
 
 
 
-       console.log(person1)
-       console.log(person1.height)
+       console.log(person1)//access single value within objecy.property  dot syntax method .Remember property is key to accessing value
+       console.log(person1.height)//shows 64 in console
        console.log(person1.classes)
        console.log(person1.classes[0])
        console.log(person1.pets.dogs[1])

@@ -36,21 +36,20 @@
     <script>
 	
 		//Store the elements (tags) in variables
-		
+		var fname = document.querySelector(`#first`)
+		var lname = document.querySelector(`#last`)
 
 		//Make an array to store the people
 		var people = [
-			 
 
+			 "Cersei",
+			 "Arya",
+			 "Daenerys",
 
-
-
-
-
-		]
+			]
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		
+		document.querySelector("#submit").addEventListener('click', calcAndDisplay)
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -74,17 +73,33 @@
 			    //1. first: will be a string that uses the first Input's value
 				//2. last: will be a string that uses the last Input's value
 
-            var person = {
+            var person1 = {
+				first: "Cersei",
+				last: "Lannister",
 
+			}//end of person object
 
+			var person2 = {
+				first: "Arya",
+				last: "Stark",
 
-            }//end of person object
+			}
 
+			var person3 = {
+				first: "Daenerys",
+				last: "Targaryen",
 
+			}
 
 
 			//Add the person object into the people array by using the .push() array method.
-			
+			var gameofthrones = [
+				person1,
+				person2,
+				person3
+
+			]
+			gameofthrones.push(people)
 
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
@@ -101,13 +116,13 @@
 			}//end of bubble sort algorithm!
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
-			
+			console.log(`Info for ${gameofthrones[i].people}:`)
 
 			//create a variable called 'output' that has an empty string value stored to 
 			
 
 			//Loop through the objects in the people array
-			for()
+			for(let key in gameofthrones[i])
             {
 
 				//Loop through each property in the object
