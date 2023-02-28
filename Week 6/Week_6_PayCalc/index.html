@@ -14,24 +14,26 @@
     <h1>Week 6 Pay Calculator</h1>
     <script>
 
-        var gross = (prompt("Enter your gross pay for 2 weeks"))
+        var rate = Number(prompt("Enter your hourly rate"))
 
-        num = Number(gross)
+        alert(`your rate is : ${rate}`)
+        var hours = Number(prompt("How many hours did you work for two weeks?"))
 
-        alert(`This is your gross  ${gross}`)
+        alert(`Your hours worked is : ${hours}`)
 
-        var tax = num * .2
+        var gross = Number(rate * hours)
 
-        alert(`This is Uncle Sams Cut  ${tax}`)
-         
-
-        console.log(`The multi value is: ${tax}`)
+        
+        var tax = Number(gross * .2)
 
         var net =  Number(gross - tax)
+        
+        alert(`       Your Gross is : \n${gross}`)
+        alert(`Your hours worked is : \n${hours}`)
+        alert(`   Uncle Sams cut is : \n${tax}`)
+        alert(`         Your net is : \n${net}`)
 
-        alert(`This is your net amount ${net}`)
-
-        console.log(`The multi value is: ${net}`)
+        console.log(gross,hours,tax,net)
 
         
 
