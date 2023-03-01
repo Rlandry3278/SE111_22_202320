@@ -21,7 +21,7 @@
 
         alert(`Your hours worked is : ${hours}`)
 
-        var gross = Number(rate * hours)
+        var gross = Number(rate * hours.toFixed(2))
 
         
         var tax = Number(gross * .2)
