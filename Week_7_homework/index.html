@@ -166,17 +166,17 @@
 
         
             //create a new var called 'info' and store the entire #info *HTML element* to it
-            var info = (`#info`)
+            var info = body.HTML `#info`
 
             //create a new var called 'num' and store the entire #check *HTML element* to it
-            var num = body.HTML 
+            var num = body.HTML `check`
 
             //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
             info.innerHTML += `<p><br>Here is some info on the  enetered info :] <br> <br> YOUR Name: ${full} <br> <br> hours worked: ${hours} yrs <br> your rate: ${rate}  </p>`
 
 
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
-            body.innerHTML += `check` 
+            body.innerHTML += (`#check`)(gross,tax,net.toFixed(2)) 
 
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )

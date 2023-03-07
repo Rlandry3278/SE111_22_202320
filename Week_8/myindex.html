@@ -49,8 +49,14 @@
 			]
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		document.querySelector("#submit").addEventListener('click', calcAndDisplay)
+		 	document.querySelector("#submit").addEventListener('click', calcAndDisplay)
+
 		
+
+		
+
+        
+
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
 		Then will bubble sort the array and print each person to the screen.
@@ -122,13 +128,13 @@
 			var output = ""
 
 			//Loop through the objects in the people array
-			for(let key in gameofthrones[i])
-            {
+			for(let key in gameofthrones[i].people)
+            {	output += `<h3>INFO FOR ${gameofthrones[i].first} :</h3>`
 
 				//Loop through each property in the object
 				for(key in people[i])
                 {
-					//The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
+					output += `<p><b>${key.toUpperCase()}</b>: ${gameofthrones[i][key]}</p>`//The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
@@ -136,7 +142,7 @@
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
-				
+				output += `<hr>`
 
 
 			}//end of loop going through people array to edit 'output'
@@ -148,7 +154,7 @@
 
 
 		}
-	
+		document.querySelector(`#output`).innerHTML = output
     </script>
     
 </body>
