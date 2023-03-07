@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name = 'Ryan Landry' content = "Week 9 HW">
+<title>Week 9 Home work Assignment</title>
+
+<style type="text/css">
+	div {
+
+		border:1px solid black;
+
+		margin-bottom:5px;
+
+
+	}
+
+	
+
+</style>
+</head>
+
+<body>
+
+	<h1>Week 9 | Dom assignment</h1>
+	<h3>Movie Characters and Credits</h3>
+	<br>
+	<br>
+
+
+	<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+		var people =[
+
+			{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+			{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+			{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+			{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+			{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+			{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+			{first:"Marion", last:"Cobretti", credit:"Cobra" }
+		]
+	
+		console.log(people[0])
+
+		console.log(people[0].first)
+
+		var body = document.querySelector(`body`)
+		console.log(body)
+		console.dir(body)
+
+		for(let i = 0; i < people.length; i++)
+		{
+
+			var tempDiv = document.createElement(`div`)
+
+			tempDiv.setAttribute(`id`, i)
+
+			tempDiv.setAttribute(`class`, `black`)
+
+			for(key in people[i])
+			{
+				var p = document.createElement(`p`)
+
+				var text = document.createTextNode(people[i][key])
+
+				p.appendChild(text)
+				tempDiv.appendChild(p)
+
+
+
+
+
+
+			}
+
+			body.appendChild(tempDiv)
+
+
+
+
+
+		}
+	</script>
+</body>
+
+
+
+</html>
